@@ -1,11 +1,4 @@
-import axios from "axios";
-
-const duneClient = axios.create({
-  baseURL: "https://api.dune.com/api",
-  headers: {
-    "X-Dune-API-Key": process.env.DUNE_API_KEY,
-  },
-});
+import { duneClient } from "./dune.js";
 
 const queryMap = {
   LaunchLab: 5126416,

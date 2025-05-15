@@ -7,7 +7,7 @@ import {
   fetchTopTokenPairByChain,
   fetchSVMTokenBalance,
 } from "./services/index.js";
-import { fetchTokens24h } from "./services/last_24h.js";
+import { fetchTokens24h } from "./services/token_created.js";
 
 // --- DEX: Get metrics for a token pair ---
 export const getDexPairMetrics = ai.defineTool(
@@ -96,6 +96,7 @@ export const getTotalTokensCreatedByPlatform = ai.defineTool(
   }
 );
 
+// --- Get active addresses by platform ---
 export const getActiveAddressesByPlatform = ai.defineTool(
   {
     name: "get_active_addresses",
@@ -116,6 +117,7 @@ export const getActiveAddressesByPlatform = ai.defineTool(
   }
 );
 
+// --- Get top tokens launched ---  
 export const getTopTokensLaunched = ai.defineTool(
   {
     name: "get_top_tokens_launched",
